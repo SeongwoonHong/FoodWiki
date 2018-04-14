@@ -1,0 +1,42 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint-config-airbnb",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] } ],
+    "no-nested-ternary": 0,
+    "max-len": 0,
+    "no-param-reassign": 0,
+    "no-extra-boolean-cast": 0,
+    "no-prototype-builtins": 0,
+    "no-return-assign": 0,
+    "react/forbid-prop-types": 0,
+    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
+    "no-confusing-arrow": [0],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }],
+    "no-use-before-define": 0,
+    "class-methods-use-this": 0,
+    "object-curly-newline": 0,
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "jsx-a11y/label-has-for": 0,
+    "camelcase": 0,
+    "no-underscore-dangle": 0,
+    "prefer-promise-reject-errors": 0,
+    "react/prop-types": 0,
+    "arrow-body-style": ["error", "always"]
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}

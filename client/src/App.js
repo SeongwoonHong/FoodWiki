@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link, NavLink, Route, Switch } from 'react-router-dom';
-import * as actions from './actions';
 import 'bootstrap/dist/css/bootstrap.css';
+
+import * as actions from './actions';
 import Articles from './components/Articles';
 import Restaurants from './components/Restaurants';
 import Youtube from './components/Youtube';
@@ -12,23 +13,18 @@ import Recipes from './components/Recipes';
 import Nutrition from './components/Nutrition/Nutrition';
 
 class App extends Component {
-  callYelp = (term, location) => {
-    this.props.fetchYelpRequest(term, location).then((data) => {
-    });
-  }
-
   fetchWatsonFileRequest = (submitData) => {
-    this.props.fetchWatsonFileRequest(submitData).then((data) => {
+    this.props.fetchWatsonFileRequest(submitData).then(() => {
     });
   }
-  render() {
 
+  render() {
     const { history, search } = this.props;
 
     return (
       <div className="App">
         <header className="navbar navbar-expand-lg bg-dark">
-          <Link to="/" style={{'margin': '0 auto'}}>
+          <Link to="/" style={{ margin: '0 auto' }}>
             FoodWikipedia
           </Link>
         </header>
@@ -36,8 +32,8 @@ class App extends Component {
           <div className="contents">
             <div className="header">
               <SearchForm
-                history={ history }
-                fetchWatsonFileRequest={this.fetchWatsonFileRequest}/>
+                history={history}
+                fetchWatsonFileRequest={this.fetchWatsonFileRequest} />
             </div>
             <div className="body">
               {
@@ -49,42 +45,47 @@ class App extends Component {
                 <li className="nav-item">
                   <NavLink
                     to="/restaurants"
-                    className="nav-link">
+                    className="nav-link"
+                  >
                     Restaurants
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink
                     to="/recipes"
-                    className="nav-link">
+                    className="nav-link"
+                  >
                     Recipes
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink
                     to="/nutrition"
-                    className="nav-link">
+                    className="nav-link"
+                  >
                     Nutrition
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink
                     to="/news"
-                    className="nav-link">
+                    className="nav-link"
+                  >
                     News
                   </NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink
                     to="/youtube"
-                    className="nav-link">
+                    className="nav-link"
+                  >
                     Videos
                   </NavLink>
                 </li>
               </ul>
               <Switch>
-                <Route path="/recipes" component={ Recipes } />
-                <Route path="/restaurants" component={ Restaurants } />
+                <Route path="/recipes" component={Recipes} />
+                <Route path="/restaurants" component={Restaurants} />
                 <Route path="/news" component={Articles} />
                 <Route path="/youtube" component={Youtube} />
                 <Route path="/Nutrition" component={Nutrition} />
@@ -100,7 +101,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     search: state.search,
-    youtube: state.youtube
+    youtube: state.youtube,
   };
 };
 
@@ -114,8 +115,8 @@ const mapDispatchToProps = (dispatch) => {
     },
     fetchWatsonFileRequest: (value) => {
       return dispatch(actions.fetchWatsonFileRequest(value));
-    }
-  }
-}
+    },
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

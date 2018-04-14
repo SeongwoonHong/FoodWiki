@@ -9,8 +9,7 @@ import recipeReducer from './recipeReducer';
 export default combineReducers({
   search: searchReducer,
   yelp: yelpReducer,
-  search: searchReducer,
   articles: articlesReducer,
   youtube: youtubeReducer,
-  recipes: recipeReducer
+  recipes: recipeReducer,
 });
