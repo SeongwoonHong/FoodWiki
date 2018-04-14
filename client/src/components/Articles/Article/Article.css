@@ -1,0 +1,19 @@
+.article-url {
+  color: #fff;
+  width: 80%;
+}
+.article-author {
+  color: #bdc3c7;
+  text-align: right;
+}
+
+.article-description {
+  opacity: 0.8;
+}
+.article-date {
+  opacity: 0.6;
+}
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+}

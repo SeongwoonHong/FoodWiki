@@ -1,0 +1,19 @@
+.list-group {
+  flex-direction: row !important;
+  margin: 5px;
+}
+.recipe-image {
+  width: 150px;
+  height: 160px;
+  display: inline-block;
+}
+.recipe-social-rank {
+  margin-bottom: 30px;
+}
+.recipe-url {
+  color: lightpink;
+}
+.recipe-url:hover {
+  text-decoration: none;
+  color: #bdc3c7;
+}

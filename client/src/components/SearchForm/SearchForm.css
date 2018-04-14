@@ -1,0 +1,45 @@
+.SearchForm {
+    padding: 15px 0px 0px 0px;
+}
+.SearchForm > .btn-group {
+    display: block;
+}
+.SearchForm > .btn-group > button {
+    border-radius: 0;
+    display: block;
+    margin: 5px auto 15px !important;
+    width: 100%;
+    font-size: 12px;
+}
+
+.SearchForm > .input-group > img {
+    display: block;
+    height: 100%;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.SearchForm .form-control {
+  width: 80%;
+  display: inline-block;
+}
+.SearchForm button {
+  display: inline-block;
+}
+.SearchForm .btn {
+  vertical-align: top !important;
+}
+.custom-file {
+  margin-bottom: 5px !important;
+}
+.custom-file-input {
+  cursor: pointer;
+}
+.SearchForm .location {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.SearchForm .location-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

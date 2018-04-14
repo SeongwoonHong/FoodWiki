@@ -1,0 +1,32 @@
+.restaurant-container .restaurant-title {
+  width: 70%;
+}
+.restaurant-container .category {
+  margin-right: 4px;
+  display: inline-block;
+}
+.restaurant-container.list-group {
+  width: 100%;
+}
+.list-group {
+  flex-direction: row !important;
+  margin: 5px;
+}
+
+.restaurant-image {
+  width: 150px;
+  height: 166px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 550px) {
+  .restaurant-container .category {
+    font-size: 9px;
+  }
+  .restaurant-phone {
+    font-size: 9px;
+  }
+  .restaurant-address {
+    margin-top: 30px;
+  }
+}

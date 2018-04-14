@@ -1,0 +1,31 @@
+#youtube .youtube-image {
+  width: 100px;
+  height: 120px;
+  margin-right: 5px;
+}
+#youtube .list-group {
+  width: 100%;
+}
+#youtube .list-group-item {
+  width: 100% !important;
+}
+
+#youtube .youtube-title {
+  color: #fff;
+}
+#youtube .youtube-title:hover {
+  text-decoration: none;
+  color: #bdc3c7;
+}
+#youtube .youtube-footer {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+@media screen and (max-width: 1000px) {
+  #youtube .youtube-image {
+    width: 100px;
+    height: 100%;
+    margin-right: initial;
+  }
+}
